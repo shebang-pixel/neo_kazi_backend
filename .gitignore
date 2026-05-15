@@ -1,0 +1,27 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local development environment
+venv/
+env/
+.env
+.venv
+pip-log.txt
+
+# Databases (standard local SQLite)
+db.sqlite3
+*.db
+
+# Django media and static folders
+media/
+staticfiles/
+
+# Logs
+*.log
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.swp
