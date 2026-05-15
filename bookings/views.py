@@ -5,3 +5,6 @@ from .serializers import BookingSerializer
 class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
+    filterset_fields = ['user', 'service', 'status']
+    search_fields = ['location_address', 'notes']
+    ordering_fields = ['scheduled_at', 'created_at']
