@@ -22,6 +22,7 @@ from services.views import ServiceViewSet
 from bookings.views import BookingViewSet
 from reviews.views import ReviewViewSet
 from invoices.views import InvoiceViewSet, PaymentViewSet
+from categories.views import CategoryViewSet
 
 router = DefaultRouter()
 router.register(r'users', UserViewSet)
@@ -30,8 +31,10 @@ router.register(r'bookings', BookingViewSet)
 router.register(r'reviews', ReviewViewSet)
 router.register(r'invoices', InvoiceViewSet)
 router.register(r'payments', PaymentViewSet)
+router.register(r'categories', CategoryViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls')),
 ]
